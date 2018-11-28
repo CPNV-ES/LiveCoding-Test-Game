@@ -1,0 +1,3 @@
+# LiveCoding test game
+
+This game is a simple SVG, you can create circles on id, ad move theses circles...
