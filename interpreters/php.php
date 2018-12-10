@@ -5,11 +5,6 @@
  */
 class Game {
 
-    public function __construct ()
-    {
-
-    }
-
     /**
      * Move the circle
      */
