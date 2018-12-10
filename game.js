@@ -38,33 +38,4 @@ class Game {
     return svg
   }
 
-  /**
-   * Ad a shape in the svg
-   */
-  addShape (shape) {
-    this.shapes.push(shape)
-  }
-}
-
-
-/**
- * Circle class allows to create shapes in the svg
- */
-class Circle {
-
-  constructor (posX, posY, radius, color) {
-    this.posX = posX
-    this.posY = posY
-    this.radius = radius
-    this.color = color
-
-    this.createElement()
-  }
-
-  createElement () {
-    this.el = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
-    this.el.setAttributeNS(null, 'x', this.posX)
-    this.el.setAttributeNS(null, 'y', this.posY)
-  }
-
 }
