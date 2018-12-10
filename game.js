@@ -24,7 +24,9 @@ class Game {
    */
   mountSVG () {
     this.svg = this.createSVG()
+    this.circle = this.createCircle()
     this.el.appendChild(this.svg)
+    this.svg.appendChild(this.circle)
   }
 
   /**
@@ -38,4 +40,37 @@ class Game {
     return svg
   }
 
+  /**
+   * Create the circle on the svg
+   */
+  createCircle () {
+    let circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
+    circle.width = 50
+    circle.height = 50
+    circle.x = this.el.width/2
+    circle.y = this.el.height/2
+    circle.style = 'background-color: #509595;'
+    return circle
+  }
+
+  /**
+   * Move the circle on X axis
+   */
+  moveX (x) {
+    this.circle
+  }
+
+  /**
+   * Move the circle on Y axis
+   */
+  moveX (y) {
+
+  }
+
+  /**
+   * Move the circle on XY axis
+   */
+  moveXY (x, y) {
+
+  }
 }
