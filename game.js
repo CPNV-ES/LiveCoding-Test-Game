@@ -57,20 +57,21 @@ class Game {
    * Move the circle on X axis
    */
   moveX (x) {
-    this.circle
+    this.circle.x = this.circle.x += x
   }
 
   /**
    * Move the circle on Y axis
    */
   moveX (y) {
-
+    this.circle.y = this.circle.y += y
   }
 
   /**
    * Move the circle on XY axis
    */
   moveXY (x, y) {
-
+    this.circle.x = this.circle.x += x
+    this.circle.y = this.circle.y += y
   }
 }
