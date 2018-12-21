@@ -1,24 +1,24 @@
 {
   "name": "Test",
-  "description": "A empty game for test purpose",
-  "paths": {
+  "description": "A meaningless game for test purpose.",
+  "data": {
     "game": "/game.js",
-    "assets": "/assets",
-    "interpreters": {
-      "php": "interpreters/php.php",
-      "ruby": "interpreters/ruby.rb",
-      "javascript": "interpreters/javascript.js",
-      "python": "interpreters/python.py"
+    "assets": "/assets"
+  },
+  "interpreters": {
+    "php": "interpreters/php.php",
+    "ruby": "interpreters/ruby.rb",
+    "javascript": "interpreters/javascript.js",
+    "python": "interpreters/python.py"
+  },
+  "instructions": [
+    {
+      "name": "Commandes",
+      "path": "instructions/commands.md"
     },
-    "instructions": [
-      {
-        "name": "Commandes",
-        "path": "instructions/commands.md"
-      },
-      {
-        "name": "Consignes",
-        "path": "instructions/readme.md"
-      }
-    ]
-  }
+    {
+      "name": "Consignes",
+      "path": "instructions/readme.md"
+    }
+  ]
 }
