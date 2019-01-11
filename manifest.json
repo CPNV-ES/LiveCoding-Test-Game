@@ -14,10 +14,12 @@
   "instructions": [
     {
       "name": "Commandes",
+      "description": "Les classes et commandes disponibles dans le jeu.",
       "path": "instructions/commands.md"
     },
     {
       "name": "Consignes",
+      "description": "Instructions pour effectuer l'exercice correctement.",
       "path": "instructions/readme.md"
     }
   ]
