@@ -4,9 +4,6 @@
  * @class
  * @author Bastien Nicoud
  */
-
-console.log('tutu')
-
 export class Game {
 
   /**
@@ -35,9 +32,9 @@ export class Game {
    */
   createSVG () {
     let svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
-    svg.width = this.el.width
-    svg.height = this.el.height
-    svg.style = 'background-color: #a5b1c2;'
+    svg.setAttribute('width', this.el.offsetWidth)
+    svg.setAttribute('height', this.el.offsetHeight)
+    svg.style = 'background-color: #ff7979;'
     return svg
   }
 
@@ -46,11 +43,10 @@ export class Game {
    */
   createCircle () {
     let circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
-    circle.width = 50
-    circle.height = 50
-    circle.x = this.el.width/2
-    circle.y = this.el.height/2
-    circle.style = 'background-color: #509595;'
+    circle.setAttribute('r', 50)
+    circle.setAttribute('cx', this.el.offsetWidth/2)
+    circle.setAttribute('cy', this.el.offsetHeight/2)
+    circle.style = 'background-color: #4834d4;'
     return circle
   }
 
@@ -58,21 +54,21 @@ export class Game {
    * Move the circle on X axis
    */
   moveX (x) {
-    this.circle.x = this.circle.x += x
+    this.circle.setAttribute('cx', this.circle.cx + x)
   }
 
   /**
    * Move the circle on Y axis
    */
-  moveX (y) {
-    this.circle.y = this.circle.y += y
+  moveY (y) {
+    this.circle.setAttribute('cy', this.circle.cy + y)
   }
 
   /**
    * Move the circle on XY axis
    */
   moveXY (x, y) {
-    this.circle.x = this.circle.x += x
-    this.circle.y = this.circle.y += y
+    this.moveX(x)
+    this.moveY(y)
   }
 }
