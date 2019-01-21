@@ -2,7 +2,6 @@
 
 > A test game for [LiveCoding](https://github.com/CPNV-ES/LiveCoding) platform
 
-## v1.0.0
+## v1.0.1
 
-* New manifest.json
-* Base Game class
+* .mjs game file
