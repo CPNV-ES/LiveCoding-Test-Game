@@ -11,11 +11,9 @@ export class Game {
 
   /**
    * @param {Element} el
-   * @param {Object} options
    */
-  constructor (el, options) {
+  constructor (el) {
     this.el = el
-    this.options = options
     this.shapes = []
 
     // Create the SVG
