@@ -7,7 +7,7 @@
 
 console.log('tutu')
 
-class Game {
+export class Game {
 
   /**
    * @param {Element} el
