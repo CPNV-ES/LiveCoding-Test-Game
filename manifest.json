@@ -2,8 +2,8 @@
   "name": "Test game !",
   "description": "A meaningless game for test purpose.",
   "data": {
-    "game": "/game.js",
-    "assets": "/assets"
+    "game": "game.mjs",
+    "assets": "assets"
   },
   "interpreters": {
     "php": "interpreters/php.php",
