@@ -43,9 +43,11 @@ export class Game {
    */
   createCircle () {
     let circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
+    this.x = this.el.offsetWidth/2
+    this.y = this.el.offsetHeight/2
     circle.setAttribute('r', 50)
-    circle.setAttribute('cx', this.el.offsetWidth/2)
-    circle.setAttribute('cy', this.el.offsetHeight/2)
+    circle.setAttribute('cx', this.x)
+    circle.setAttribute('cy', this.y)
     circle.style = 'background-color: #4834d4;'
     return circle
   }
@@ -54,14 +56,14 @@ export class Game {
    * Move the circle on X axis
    */
   moveX (x) {
-    this.circle.setAttribute('cx', this.circle.cx + x)
+    this.circle.setAttribute('cx', this.x + x)
   }
 
   /**
    * Move the circle on Y axis
    */
   moveY (y) {
-    this.circle.setAttribute('cy', this.circle.cy + y)
+    this.circle.setAttribute('cy', this.y + y)
   }
 
   /**
