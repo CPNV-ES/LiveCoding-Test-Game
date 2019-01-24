@@ -56,14 +56,14 @@ export class Game {
    * Move the circle on X axis
    */
   moveX (x) {
-    this.circle.setAttribute('cx', this.x + x)
+    this.circle.setAttribute('cx', this.x += x)
   }
 
   /**
    * Move the circle on Y axis
    */
   moveY (y) {
-    this.circle.setAttribute('cy', this.y + y)
+    this.circle.setAttribute('cy', this.y += y)
   }
 
   /**
