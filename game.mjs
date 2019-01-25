@@ -39,7 +39,7 @@ export class Game {
   }
 
   /**
-   * Create the circle on the svg
+   * Create the circle in the svg
    */
   createCircle () {
     let circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
@@ -73,4 +73,5 @@ export class Game {
     this.moveX(x)
     this.moveY(y)
   }
+
 }

@@ -20,7 +20,7 @@
     {
       "name": "Consignes",
       "description": "Instructions pour effectuer l'exercice correctement.",
-      "path": "instructions/readme.md"
+      "path": "instructions/play_game.md"
     }
   ]
 }
