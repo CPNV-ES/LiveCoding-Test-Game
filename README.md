@@ -4,7 +4,7 @@
 > This little game is an example of a game structure. For detailed documentation,
 > read the dedicated documentation on the [LiveCoding repo](https://github.com/CPNV-ES/LiveCoding/tree/master/docs).
 
-## Changelog v1.1.0
+## Changelog v1.1.1
 
 * Added an image in assets for dev purpose
 
