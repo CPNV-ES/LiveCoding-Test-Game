@@ -6,8 +6,7 @@
 
 ## Changelog v1.1.0
 
-* Cleaning instructions
-* manifest structure changes
+* Added an image in assets for dev purpose
 
 ## The game
 
