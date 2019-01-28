@@ -25,12 +25,6 @@ export class Game {
     this.svg = this.createSVG()
     this.circle = this.createCircle()
     this.el.appendChild(this.svg)
-
-    // For testing purpose
-    let img = document.createElement('img')
-    img.src = `${this.assetsPath}/live_coding_logo.png`
-    this.el.appendChild(img)
-
     this.svg.appendChild(this.circle)
   }
 
