@@ -4,9 +4,9 @@
 > This little game is an example of a game structure. For detailed documentation,
 > read the dedicated documentation on the [LiveCoding repo](https://github.com/CPNV-ES/LiveCoding/tree/master/docs).
 
-## Changelog v1.1.3
+## Changelog v1.1.4
 
-* Fixes
+* New php interpreter
 
 ## The game
 
