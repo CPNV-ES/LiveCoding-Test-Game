@@ -18,6 +18,12 @@ export class Game {
     this.mountSVG()
   }
 
+  executeGameCommand (command) {
+    console.log(`Command to execute : ${command}`)
+    this.el.innerText = command
+    return true
+  }
+
   /**
    * Create the svg
    */
