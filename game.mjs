@@ -19,8 +19,15 @@ export class Game {
   }
 
   executeGameCommand (command) {
-    console.log(`Command to execute : ${command}`)
-    this.el.innerText = command
+    command = JSON.parse(command)
+    let availableCommands = {
+      moveX: this.moveX(command.params),
+      moveY: this.moveY(command.params),
+      moveXY: this.moveXY(command.params[0], command.params[1])
+    }
+    console.log(`Command to execute.`)
+    availableCommands[command.action]
+    // commandStatus = eval(command)
     return true
   }
 
