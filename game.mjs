@@ -20,14 +20,21 @@ export class Game {
 
   executeGameCommand (command) {
     command = JSON.parse(command)
-    let availableCommands = {
-      moveX: this.moveX(command.params),
-      moveY: this.moveY(command.params),
-      moveXY: this.moveXY(command.params[0], command.params[1])
+    console.log(`Command to execute : ${command.action}`)
+    // Test the command to execute
+    switch (command.action) {
+      case 'moveX':
+        this.moveX(command.params)
+        break
+      case 'moveY':
+        this.moveY(command.params)
+        break
+      case 'moveXY':
+        this.moveXY(command.params[0], command.params[1])
+        break
+      default:
+        console.log('This command not exist.')
     }
-    console.log(`Command to execute.`)
-    availableCommands[command.action]
-    // commandStatus = eval(command)
     return true
   }
 
