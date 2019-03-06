@@ -95,4 +95,11 @@ export class Game {
     this.moveY(y)
   }
 
+  /**
+   * Method used to wait key pressed in the svg
+   */
+  waitUntilKeyPressed () {
+    console.log('Wait the user pres an arrow key !')
+  }
+
 }
