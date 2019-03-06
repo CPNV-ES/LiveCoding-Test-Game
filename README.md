@@ -4,9 +4,10 @@
 > This little game is an example of a game structure. For detailed documentation,
 > read the dedicated documentation on the [LiveCoding repo](https://github.com/CPNV-ES/LiveCoding/tree/master/docs).
 
-## Changelog v1.1.5
+## Changelog v1.1.6
 
-* Add `executeGameCommand` to Game class
+* Now use json to transfer function parameters
+* PHP methods sleeps 0.5 secon each execution (for debug purpose)
 
 ## The game
 
