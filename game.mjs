@@ -32,6 +32,9 @@ export class Game {
       case 'moveXY':
         this.moveXY(command.params[0], command.params[1])
         break
+      case 'resetCirclePosition':
+        this.resetCirclePosition()
+        break
       default:
         console.log('This command not exist.')
     }
@@ -93,6 +96,23 @@ export class Game {
   moveXY (x, y) {
     this.moveX(x)
     this.moveY(y)
+  }
+
+  /**
+   * Place the circle at original position
+   */
+  resetCirclePosition () {
+    this.x = this.el.offsetWidth/2
+    this.y = this.el.offsetHeight/2
+    this.circle.setAttribute('cx', this.x)
+    this.circle.setAttribute('cy', this.y)
+  }
+
+  /**
+   * Method used to wait key pressed in the svg
+   */
+  waitUntilKeyPressed () {
+    console.log('Wait the user pres an arrow key !')
   }
 
 }
