@@ -59,5 +59,17 @@ class Game {
         }
     }
 
+    /**
+     * Reset circle position
+     */
+    public static function resetCirclePosition() {
+        $response = Engine::send(
+            json_encode([
+                "action" => "resetCirclePosition"
+            ])
+        );
+        return $response;
+    }
+
 }
 ?>
