@@ -9,7 +9,7 @@ class Game {
      * Move the circle
      */
     public static function moveX($x) {
-        //usleep(500000);
+        sleep(1);
         if (is_int($x)) {
             $response = Engine::send(
                 json_encode([
@@ -27,7 +27,7 @@ class Game {
      * Move the circle
      */
     public static function moveY($y) {
-        //usleep(500000);
+        sleep(1);
         if (is_int($y)) {
             $response = Engine::send(
                 json_encode([
@@ -45,11 +45,11 @@ class Game {
      * Move the circle
      */
     public static function moveXY($x, $y) {
-        //usleep(500000);
+        sleep(1);
         if (is_int($x) && is_int($y)) {
             $response = Engine::send(
                 json_encode([
-                    "action" => "moveX",
+                    "action" => "moveXY",
                     "params" => [$x, $y]
                 ])
             );
@@ -63,9 +63,22 @@ class Game {
      * Reset circle position
      */
     public static function resetCirclePosition() {
+        sleep(1);
         $response = Engine::send(
             json_encode([
                 "action" => "resetCirclePosition"
+            ])
+        );
+        return $response;
+    }
+
+    /**
+     * Reset circle position
+     */
+    public static function waitUntilKeyPressed() {
+        $response = Engine::send(
+            json_encode([
+                "action" => "waitUntilKeyPressed"
             ])
         );
         return $response;

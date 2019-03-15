@@ -18,7 +18,7 @@ export class Game {
     this.mountSVG()
   }
 
-  executeGameCommand (command) {
+  async executeGameCommand (command) {
     command = JSON.parse(command)
     console.log(`Command to execute : ${command.action}`)
     // Test the command to execute
@@ -30,11 +30,18 @@ export class Game {
         this.moveY(command.params)
         break
       case 'moveXY':
+        console.log('x' + command.params[0])
+        console.log('y' + command.params[1])
         this.moveXY(command.params[0], command.params[1])
         break
       case 'resetCirclePosition':
         this.resetCirclePosition()
         break
+      case 'waitUntilKeyPressed':
+        let tutu = await this.waitUntilKeyPressed()
+        console.log('OHHH A KEY PRESSED !!!')
+        console.log(tutu.keyCode)
+        return tutu.keyCode
       default:
         console.log('This command not exist.')
     }
@@ -110,9 +117,13 @@ export class Game {
 
   /**
    * Method used to wait key pressed in the svg
+   * @returns {Event}
    */
   waitUntilKeyPressed () {
     console.log('Wait the user pres an arrow key !')
+    return new Promise(resolve => {
+      document.addEventListener('keyup', resolve, {once:true});
+    })
   }
 
 }
