@@ -9,7 +9,6 @@ class Game {
      * Move the circle
      */
     public static function moveX($x) {
-        sleep(1);
         if (is_int($x)) {
             $response = Engine::send(
                 json_encode([
@@ -17,6 +16,7 @@ class Game {
                     "params" => $x
                 ])
             );
+            usleep(500000);
             return $response;
         } else {
             throw new Exception('moveX only accepts integers');
@@ -27,7 +27,6 @@ class Game {
      * Move the circle
      */
     public static function moveY($y) {
-        sleep(1);
         if (is_int($y)) {
             $response = Engine::send(
                 json_encode([
@@ -35,6 +34,7 @@ class Game {
                     "params" => $y
                 ])
             );
+            usleep(500000);
             return $response;
         } else {
             throw new Exception('moveY only accepts integers');
@@ -45,7 +45,6 @@ class Game {
      * Move the circle
      */
     public static function moveXY($x, $y) {
-        sleep(1);
         if (is_int($x) && is_int($y)) {
             $response = Engine::send(
                 json_encode([
@@ -53,6 +52,7 @@ class Game {
                     "params" => [$x, $y]
                 ])
             );
+            usleep(500000);
             return $response;
         } else {
             throw new Exception('moveXY only accepts integers');
@@ -76,12 +76,12 @@ class Game {
      * Reset circle position
      */
     public static function waitUntilKeyPressed() {
-        $response = Engine::send(
+        $keyCode = Engine::send(
             json_encode([
                 "action" => "waitUntilKeyPressed"
             ])
         );
-        return $response;
+        return $keyCode;
     }
 
 }
