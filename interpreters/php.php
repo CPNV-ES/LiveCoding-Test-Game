@@ -16,7 +16,7 @@ class Game {
                     "params" => $x
                 ])
             );
-            usleep(500000);
+            // usleep(500000);
             return $response;
         } else {
             throw new Exception('moveX only accepts integers');
@@ -34,7 +34,7 @@ class Game {
                     "params" => $y
                 ])
             );
-            usleep(500000);
+            // usleep(500000);
             return $response;
         } else {
             throw new Exception('moveY only accepts integers');
@@ -52,7 +52,7 @@ class Game {
                     "params" => [$x, $y]
                 ])
             );
-            usleep(500000);
+            // usleep(500000);
             return $response;
         } else {
             throw new Exception('moveXY only accepts integers');
