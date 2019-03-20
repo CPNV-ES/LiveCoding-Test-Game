@@ -9,41 +9,46 @@ export class Game {
   /**
    * @param {Element} el
    */
-  constructor (el, assetsPath) {
-    this.el = el
-    this.assetsPath = assetsPath
+  constructor ({element, assetsBasePath, console}) {
+    this.el = element
+    this.assetsPath = assetsBasePath
     this.shapes = []
+    this.console = console
 
     // Create the SVG
+    this.console.info('Mounting SVG')
     this.mountSVG()
+    this.console.info('SVG mounted')
   }
 
   async executeGameCommand (command) {
     command = JSON.parse(command)
-    console.log(`Command to execute : ${command.action}`)
+    this.console.log(`Command to execute : ${command.action}`)
     // Test the command to execute
     switch (command.action) {
       case 'moveX':
         this.moveX(command.params)
+        this.console.log(`moveX executed : ${command.params} px`)
         break
       case 'moveY':
         this.moveY(command.params)
+        this.console.log(`moveY executed : ${command.params} px`)
         break
       case 'moveXY':
-        console.log('x' + command.params[0])
-        console.log('y' + command.params[1])
         this.moveXY(command.params[0], command.params[1])
+        this.console.log(`moveXY executed : ${command.params[0]} px, ${command.params[0]} px`)
         break
       case 'resetCirclePosition':
         this.resetCirclePosition()
+        this.console.log(`circle position rested`)
         break
       case 'waitUntilKeyPressed':
+        this.console.log(`wait next key pressed`)
         let tutu = await this.waitUntilKeyPressed()
-        console.log('OHHH A KEY PRESSED !!!')
-        console.log(tutu.keyCode)
+        this.console.info(`key pressed : ${tutu.keyCode}`)
         return tutu.keyCode
       default:
-        console.log('This command not exist.')
+        this.console.log('This command not exist.')
     }
     return true
   }
@@ -120,7 +125,6 @@ export class Game {
    * @returns {Event}
    */
   waitUntilKeyPressed () {
-    console.log('Wait the user pres an arrow key !')
     return new Promise(resolve => {
       document.addEventListener('keyup', resolve, {once:true});
     })
